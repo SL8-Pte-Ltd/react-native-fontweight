@@ -55,7 +55,7 @@ function font_style_generator(
 			fontFamily += 'Thin'
 			break
 		case '200':
-			fontFamily += 'Ultralight'
+			fontFamily += 'ExtraLight'
 			break
 		case '300':
 			fontFamily += 'Light'
@@ -67,7 +67,7 @@ function font_style_generator(
 			fontFamily += 'Medium'
 			break
 		case '600':
-			fontFamily += 'Semibold'
+			fontFamily += 'SemiBold'
 			break
 		case '700':
 			fontFamily += 'Bold'
@@ -116,7 +116,7 @@ class FontManager {
 				// HACK: Disabled mutation of fontStyle as is immutable in some libaries
 				// origin.props.style.fontStyle = 'normal'
 
-				const fontFamily: string = origin.props.style.fontFamily ? origin.props.style.fontFamily : 'Roboto'
+				const fontFamily: string = origin.props.style.fontFamily ? origin.props.style.fontFamily : 'Assistant'
 
 				return React.cloneElement(origin, {
 					style: [{}, origin.props.style, font_style_generator(fontFamily, fontWeight, fontStyle)],
